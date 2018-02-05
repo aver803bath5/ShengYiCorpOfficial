@@ -24,11 +24,15 @@ module.exports = {
   */
   loading: { color: '#3B8070' },
 
+  router: {
+    middleware: 'i18n',
+  },
+
   /*
   ** Global CSS
   */
   css: [
-    'element-ui/lib/theme-default/index.css',
+    'element-ui/lib/theme-chalk/index.css',
     '@/assets/css/all.css'
   ],
 
@@ -36,7 +40,8 @@ module.exports = {
   ** Plugins to load before mounting the App
   */
   plugins: [
-    '@/plugins/element-ui'
+    '@/plugins/element-ui',
+    '@/plugins/i18n.js'
   ],
 
   /*
@@ -61,6 +66,9 @@ module.exports = {
     /*
     ** You can extend webpack config here
     */
+    vender: [
+      'vue-i18n'
+    ],
     extend(config, ctx) {
       // Run ESLint on save
       if (ctx.isDev && ctx.isClient) {

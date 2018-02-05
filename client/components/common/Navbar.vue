@@ -1,29 +1,25 @@
 <template>
-  <div class="navbar-wrapper">
-    <el-menu :default-active="activeIndex" class="navbar" mode="horizontal" @select="handleSelect">
-      <div class="navbar-inner">
-        <div class="logo-wrapper">
-          <img src="/logo.jpg" alt="Sheng-Yi-Corp" class="logo-img">
-        </div>
-        <div class="logo-text-wrapper">
-          <div class="logo-text-inner">
-            <h1>
-              <div class="tw-text">
-                昇儀股份有限公司
-              </div>
-              <div class="en-text">
-                Sheng Yi Tech &amp; Analytics Co., Ltd.
-              </div>
-            </h1>
-          </div>
-        </div>
-        <div class="navbar-item-wrapper">
-          <el-menu-item index="1">首頁</el-menu-item>
-          <el-menu-item index="3">關於我們</el-menu-item>
-        </div>
+  <el-menu :default-active="activeIndex" class="navbar" mode="horizontal" @select="handleSelect">
+    <div class="navbar-inner el-menu--horizontal">
+      <div class="logo-wrapper">
+      <img src="/logo.jpg" alt="Sheng-Yi-Corp" class="logo-img">
       </div>
-    </el-menu>
-  </div>
+      <header class="logo-text-wrapper">
+        <div class="logo-text-inner">
+          <h1>
+            <div class="tw-text">
+              昇儀股份有限公司
+            </div>
+            <div class="en-text">
+              Sheng Yi Tech &amp; Analytics Co., Ltd.
+            </div>
+          </h1>
+        </div>
+      </header>
+      <el-menu-item index="1">{{ $t('navbar.home') }}</el-menu-item>
+      <el-menu-item index="3">關於我們</el-menu-item>
+    </div>
+  </el-menu>
 </template>
 
 <script>
@@ -43,11 +39,6 @@ export default {
 </script>
 
 <style scoped>
-.navbar {
-  background-color: #fff;
-  border-bottom: 1px solid #ddd;
-}
-
 .navbar-inner {
   max-width: 1200px;
   margin: 0 auto;
@@ -61,7 +52,8 @@ export default {
 
 .logo-img {
   width: 100%;
-  padding-top: 3px;
+  display: block;
+  margin-top: 5px;
 }
 
 .logo-text-wrapper {
@@ -70,9 +62,20 @@ export default {
 }
 
 h1 {
-  font-size: 1.2rem;
-  font-weight: 100;
+  font-size: 1.7rem;
   letter-spacing: 1px;
+}
+
+.tw-text {
+  font-weight: 400;
+}
+
+.en-text {
+  font-size: .8rem;
+  font-weight: 300;
+  margin-top: -5px;
+  letter-spacing: .7px;
+  margin-left: 1px;
 }
 
 </style>
