@@ -29,3 +29,16 @@ a {
   float: right;
 }
 
+button:active {
+  outline: none;
+  border: none;
+}
+
+button:focus {outline:0;}
+
+
+@media screen and (max-width: 950px) {
+  .wrapper {
+    margin-top: 58.73px;
+  }
+}
