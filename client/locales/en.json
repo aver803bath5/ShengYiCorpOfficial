@@ -1,0 +1,12 @@
+{
+  "navbar": {
+    "home": "Home",
+    "about": "About Us",
+    "products": "Products",
+    "gas-products": "Gas Monitored",
+    "brands": "Brands",
+    "contact": "Contact Us",
+    "close": "Close",
+    "lang": "中文"
+  }
+}
