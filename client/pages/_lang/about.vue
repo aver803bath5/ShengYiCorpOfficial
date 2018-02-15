@@ -46,7 +46,7 @@
           <h2 class="subtitle">
             {{ $t('about.certification.title') }}
           </h2>
-          <div class="tw-content" v-if="locale==='tw'">
+          <div class="tw-cert-content" v-if="locale==='tw'">
             <p>
               2012年取得 <b>ISO 9001</b> 認證。
             </p>
@@ -76,25 +76,40 @@
             <p>
               *以上均含遊校
             </p>
-            <div class="tw-cert-images-wrapper">
-              <div class="tw-cert-image">
-                <img src="/about/aboutImage1.jpg" alt="登錄證書">
-              </div>
-              <div class="tw-cert-image">
-                <img src="/about/aboutImage2.jpg" alt="TAF 認證證書">
-              </div>
-              <div class="tw-cert-image">
-                <img src="/about/aboutImage3.jpg" alt="TAF 認證證書">
-              </div>
-            </div>
           </div>
-          <div class="en-conetent" v-else>
+          <div class="en-cert-content" v-else>
             <p>
-              2012年取得 <b>ISO 9001</b> 認證。
+              ISO 9001 compliance certificate.
             </p>
             <p>
-              2013年通過 <b>ISO 17025 TAF</b> 認證之校正實驗室。
+              We are accredited in respect of TAF laboratory ISO/IEC 17025:2005.
             </p>
+            <p>
+              Accreditation Number: 2703
+            </p>
+            <p>
+              Originally Accredited Date: May 07, 2013
+            </p>
+            <p>
+              Accredited Scope: Calibration Field
+            </p>
+            <p>
+              Calibration Items: Four-sensor Gas Detector, Five-sensor Gas Detector and VOC Gas Detector (On-site Calibration Included)
+            </p>
+          </div>
+          <div class="cert-images-wrapper">
+            <div class="cert-image">
+              <img src="/about/aboutImage1.jpg" alt="登錄證書">
+            </div>
+            <div class="cert-image" v-if="locale==='tw'">
+              <img src="/about/aboutImage2.jpg" alt="TAF 認證證書">
+            </div>
+            <div class="cert-image" v-else>
+              <img src="/about/enAboutImage.jpg" alt="TAF 認證證書">
+            </div>
+            <div class="cert-image">
+              <img src="/about/aboutImage3.jpg" alt="TAF 認證證書">
+            </div>
           </div>
         </article>
       </section>
@@ -115,7 +130,7 @@ export default {
     return {
       title: this.$t('about.title'),
         meta: [
-          { hid: 'description', name: 'description', content: '關於昇儀' }
+          { hid: 'description', name: 'description', content: this.$t('about.instruction') }
       ]
     }
   }
@@ -155,7 +170,7 @@ img {
   margin-top: 1.5rem;
 }
 
-.tw-cert-image {
+.cert-image {
   margin-top: 1rem;
 }
 </style>
