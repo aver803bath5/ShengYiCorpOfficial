@@ -1,6 +1,6 @@
 <template>
 <div class="navbar-wrapper">
-  <el-menu :default-active="activeIndex" class="navbar" mode="horizontal" @select="handleSelect">
+  <el-menu :default-active="activeIndex" :router="true" class="navbar" mode="horizontal">
     <div class="navbar-inner">
       <div class="logo-and-text-wrapper">
         <div class="logo-wrapper">
@@ -20,37 +20,25 @@
         </header>
       </div>
       <div class="float-right el-menu--horizontal menu-item-wrapper">
-        <el-menu-item index="1">
-          <nuxt-link :to="convertPath('/', locale)">
-            {{ $t('navbar.home') }}
-          </nuxt-link>
+        <el-menu-item :index="convertPath('/', locale)">
+          {{ $t('navbar.home') }}
         </el-menu-item>
-        <el-menu-item index="2">
-          <nuxt-link :to="convertPath('/about', locale)">
-            {{ $t('navbar.about') }}
-          </nuxt-link>
+        <el-menu-item :index="convertPath('/about', locale)">
+          {{ $t('navbar.about') }}
         </el-menu-item>
-        <el-menu-item index="3">
-          <nuxt-link :to="convertPath('/products', locale)">
-            {{ $t('navbar.products') }}
-          </nuxt-link>
+        <el-menu-item :index="convertPath('/products', locale)">
+          {{ $t('navbar.products') }}
         </el-menu-item>
-        <el-menu-item index="4">
-          <nuxt-link :to="convertPath('/gas-products', locale)">
-            {{ $t('navbar.gas-products') }}
-          </nuxt-link>
+        <el-menu-item :index="convertPath('/gas-products', locale)">
+          {{ $t('navbar.gas-products') }}
         </el-menu-item>
-        <el-menu-item index="5">
-          <nuxt-link :to="convertPath('/brands', locale)">
-            {{ $t('navbar.brands') }}
-          </nuxt-link>
+        <el-menu-item :index="convertPath('/brands', locale)">
+          {{ $t('navbar.brands') }}
         </el-menu-item>
-        <el-menu-item index="6">
-          <nuxt-link :to="convertPath('/contact', locale)">
-            {{ $t('navbar.contact') }}
-          </nuxt-link>
+        <el-menu-item :index="convertPath('/contact', locale)">
+          {{ $t('navbar.contact') }}
         </el-menu-item>
-        <el-menu-item index="7" @click="changeLang">{{ $t('navbar.lang') }}</el-menu-item>
+        <el-menu-item index="" @click="changeLang">{{ $t('navbar.lang') }}</el-menu-item>
       </div>
       <div class="toggle-menu-button-wrapper" :class="{open: isToggled}" @click="isToggled = !isToggled">
         <span></span>
@@ -92,9 +80,6 @@ export default {
     changeLang() {
       this.switchLocale(this.locale);
       this.$router.push(this.convertPath(this.$route.fullPath, this.locale));
-    },
-    handleSelect(key, keyPath) {
-      console.log(key, keyPath);
     }
   },
   components: {

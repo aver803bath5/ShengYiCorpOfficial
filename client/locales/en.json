@@ -8,5 +8,24 @@
     "contact": "Contact Us",
     "close": "Close",
     "lang": "中文"
+  },
+  "about": {
+    "title": "About Us",
+    "instruction": "Sheng Yi Tech & Analytics Co., Ltd., established in 1998, is a leading & professional agent of gas detectors, indoor air quality monitors, water analyzers, and on-line process oil analyzers in Taiwan. We also provide customers advanced maintenance & repair, and system integration. Our major business focuses are on the field of schools, research organization, petrochemical plants, engineering companies, waste water treatment plants, refineries, etc. Our staffs are very professional in above fields, no matter the salesmen or service engineers who have been working on detection and on-line process analyzers more than 10 years. We represent and import the instruments and equipment from Europe, USA, and Japan to meet our customers’ demands and application. We completely take the technical service quality as the branch specialized instrument company.We are continuing to grown rapidly and striving to meet our challenges. We expanded branches offices in Kaohsiung and Taichung within the past few years. We expect to service all the customers in Taiwan.",
+    "duty": {
+      "title": "Missions and Goal",
+      "content": "Our mission is to provide advanced equipment, professional technology, enthusiasm of service and dedicated in helping our existing customers and continue develop new customers. Our overall goal is to be the most valuable and accountable partner to our customers."
+    },
+    "ideal": {
+      "title": "Management Ideal",
+      "content": "By the steady and steadfast footsteps, leads all the staff of Sheng Yi to grow well, assists the manufacturer to provide the specialized technology in Asia to give the customer, advances to the international regional marketing, and provides the technical support plan. Reported that holds manner which consistent earnest, steadfast and continues forever to manage, the unceasing promotion working efficiency and the specialized technology, grow and develop continually."
+    },
+    "overwatch": {
+      "title": "Attach Importance to IAQ Indoor Air Quality",
+      "content": "he people occupies in for a long time the indoor building the work and the life, if have never realized occupies for a long time uses improper or under the inferior building materials work and the home environment, will cause the body to suffer the serious violation. Sheng Yi takes under the office work environment more and more in various countries the indoor air quality, thus provides the specialized indoor air quality monitors (for example: formaldehyde, volatile organic compound-VOC, particle, ozone, etc.), help in the examination building's indoor air quality.(如:甲醛、揮發性有機物、粉塵、臭氧等偵測器)，幫助檢測建築物內的室內空氣品質。"
+    },
+    "certification": {
+      "title": "Certification"
+    }
   }
 }
