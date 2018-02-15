@@ -36,6 +36,9 @@ button:active {
 
 button:focus {outline:0;}
 
+.container {
+  min-height: 100vh;
+}
 
 @media screen and (max-width: 950px) {
   .wrapper {
