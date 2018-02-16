@@ -3,29 +3,29 @@
   <footer class="footer-inner">
     <div class="corp-info-wrapper">
       <div class="corp-info-inner">
-        <h3 class="corp-name">台北總公司</h3>
-        <p>23511新北市中和區建八路2號7樓之3</p>
-        <p>TEL: (02) 8226-2680</p>
-        <p>FAX: (02) 8226-2740</p>
-        <p>Email: sales@shengyi.com.tw</p>
+        <h3 class="corp-name">{{ $t('footer.taipei.name') }}</h3>
+        <p>{{ $t('footer.taipei.address') }}</p>
+        <p>{{ $t('footer.taipei.tel') }}</p>
+        <p>{{ $t('footer.taipei.fax') }}</p>
+        <p>Email: {{ $t('footer.taipei.email') }}</p>
       </div>
     </div>
     <div class="corp-info-wrapper">
       <div class="corp-info-inner">
-        <h3 class="corp-name">台中分公司</h3>
-        <p>40242台中市南區大慶街二段7巷22號8F</p>
-        <p>TEL: (04) 2263-0967</p>
-        <p>FAX: (04) 2263-0965</p>
-        <p>Email: sales@shengyi.com.tw</p>
+        <h3 class="corp-name">{{ $t('footer.taichung.name') }}</h3>
+        <p>{{ $t('footer.taichung.address') }}</p>
+        <p>{{ $t('footer.taichung.tel') }}</p>
+        <p>{{ $t('footer.taichung.fax') }}</p>
+        <p>Email: {{ $t('footer.taichung.email') }}</p>
       </div>
     </div>
     <div class="corp-info-wrapper">
       <div class="corp-info-inner">
-        <h3 class="corp-name">高雄分公司</h3>
-        <p>81357高雄市左營區博愛二路198號5F-3</p>
-        <p>TEL: (07) 558-6310</p>
-        <p>FAX: (07) 558-6491</p>
-        <p>Email: sales@shengyi.com.tw</p>
+        <h3 class="corp-name">{{ $t('footer.kaoshiung.name') }}</h3>
+        <p>{{ $t('footer.kaoshiung.address') }}</p>
+        <p>{{ $t('footer.kaoshiung.tel') }}</p>
+        <p>{{ $t('footer.kaoshiung.fax') }}</p>
+        <p>Email: {{ $t('footer.kaoshiung.email') }}</p>
       </div>
     </div>
     <div class="icon-wrapper">
