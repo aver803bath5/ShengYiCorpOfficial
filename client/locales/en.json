@@ -9,6 +9,29 @@
     "close": "Close",
     "lang": "中文"
   },
+  "footer": {
+    "taipei": {
+      "name": "Taipei",
+      "address": "7F-3, No.2, Jian 8th Rd., Jhonghe Dist., New Taipei City 23511, Taiwan (R.O.C.)",
+      "tel": "TEL: (02) 8226-2680",
+      "fax": "FAX: (02) 8226-2740",
+      "email": "sales@shengyi.com.tw"
+    },
+    "taichung": {
+      "name": "Taichung",
+      "address": "8F., No.22, Ln. 7, Sec. 1, Daqing St., South Dist., Taichung City 402, Taiwan (R.O.C.)",
+      "tel": "TEL: (04) 2263-0967",
+      "fax": "FAX: (04) 2263-0965",
+      "email": "sales@shengyi.com.tw"
+    },
+    "kaoshiung": {
+      "name": "Kaoshiung",
+      "address": "5F.-3, No.198, Bo-ai 2nd Rd., Zuoying Dist., Kaohsiung City 813, Taiwan (R.O.C.)",
+      "tel": "TEL: (07) 558-6310",
+      "fax": "FAX: (07) 558-6491",
+      "email": "sales@shengyi.com.tw"
+    }
+  },
   "about": {
     "title": "About Us",
     "instruction": "Sheng Yi Tech & Analytics Co., Ltd., established in 1998, is a leading & professional agent of gas detectors, indoor air quality monitors, water analyzers, and on-line process oil analyzers in Taiwan. We also provide customers advanced maintenance & repair, and system integration. Our major business focuses are on the field of schools, research organization, petrochemical plants, engineering companies, waste water treatment plants, refineries, etc. Our staffs are very professional in above fields, no matter the salesmen or service engineers who have been working on detection and on-line process analyzers more than 10 years. We represent and import the instruments and equipment from Europe, USA, and Japan to meet our customers’ demands and application. We completely take the technical service quality as the branch specialized instrument company.We are continuing to grown rapidly and striving to meet our challenges. We expanded branches offices in Kaohsiung and Taichung within the past few years. We expect to service all the customers in Taiwan.",
