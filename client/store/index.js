@@ -1,6 +1,8 @@
 export const state = () => ({
   locales: ['tw', 'en'],
-  locale: 'tw'
+  locale: 'tw',
+  carousels: [],
+  loading: false
 })
 
 export const actions = {
@@ -16,5 +18,11 @@ export const mutations = {
     if (state.locales.indexOf(locale) !== -1) {
       state.locale = locale;
     }
+  },
+  SET_CAROUSELS(state, carousels) {
+    state.carousels = carousels;
+  },
+  SET_LOADING(state, loading) {
+    state.loading = loading;
   }
 }
