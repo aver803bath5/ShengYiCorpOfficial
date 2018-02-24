@@ -189,7 +189,7 @@ h1 {
     position: fixed;
     width: 100%;
     top: 0;
-    /* z-index: 999; */
+    z-index: 999;
   }
 
   .toggle-menu-button-wrapper {

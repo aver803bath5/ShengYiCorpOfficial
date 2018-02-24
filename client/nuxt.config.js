@@ -22,7 +22,10 @@ module.exports = {
   /*
   ** Customize the progress-bar color
   */
-  loading: { color: '#3B8070' },
+  loading: {
+    color: '#3B8070',
+    height: '3px'
+  },
 
   router: {
     middleware: 'i18n',
@@ -41,7 +44,7 @@ module.exports = {
   */
   plugins: [
     '@/plugins/element-ui',
-    '@/plugins/i18n.js'
+    '@/plugins/i18n'
   ],
 
   /*

@@ -5,13 +5,13 @@
 </template>
 
 <script>
-import axios from 'axios';
 import Carousel from '@/components/home/Carousel';
+import axios from '~/plugins/axios';
 
 export default {
   async fetch({ store }) {
     store.commit('SET_LOADING', true);
-    const { data } = await axios.get('http://127.0.0.1:9999/banners');
+    const { data } = await axios.get('/banners');
     store.commit('SET_CAROUSELS', data);
     store.commit('SET_LOADING', false);
   },
