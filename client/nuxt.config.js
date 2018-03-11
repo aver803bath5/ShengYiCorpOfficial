@@ -61,6 +61,10 @@ module.exports = {
         {
           set: '@fortawesome/fontawesome-free-brands',
           icons: ['faFacebook', 'faYoutube']
+        },
+        {
+          set: '@fortawesome/fontawesome-free-solid',
+          icons: ['faThumbtack']
         }
     ],
   },
@@ -92,6 +96,7 @@ module.exports = {
     extend(config, ctx) {
       // Run ESLint on save
       config.resolve.alias['@fortawesome/fontawesome-free-brands$'] = '@fortawesome/fontawesome-free-brands/shakable.es.js'
+      config.resolve.alias['@fortawesome/fontawesome-free-solid$'] = '@fortawesome/fontawesome-free-solid/shakable.es.js'
       if (ctx.isDev && ctx.isClient) {
         config.module.rules.push({
           enforce: 'pre',

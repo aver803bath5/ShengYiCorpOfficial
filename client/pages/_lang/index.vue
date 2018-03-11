@@ -1,11 +1,13 @@
 <template>
   <div class="wrapper">
     <carousel></carousel>
+    <latestnews-list></latestnews-list>
   </div>
 </template>
 
 <script>
 import Carousel from '@/components/home/Carousel';
+import LatestnewsList from '@/components/home/LatestnewsList';
 import axios from '~/plugins/axios';
 
 export default {
@@ -21,7 +23,8 @@ export default {
     };
   },
   components: {
-    Carousel
+    Carousel,
+    LatestnewsList
   }
 }
 </script>

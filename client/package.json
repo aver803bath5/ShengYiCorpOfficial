@@ -26,6 +26,7 @@
     "element-ui": "^2.1.0",
     "event-source-polyfill": "^0.0.12",
     "koa": "^2.3.0",
+    "moment": "^2.21.0",
     "nuxt": "^1.0.0",
     "nuxt-fontawesome": "^0.1.3",
     "qonfucius-nuxt-fontawesome": "^0.0.1",
