@@ -11,7 +11,7 @@ import axios from '~/plugins/axios';
 export default {
   async fetch({ store }) {
     store.commit('SET_LOADING', true);
-    const { data } = await axios.get('/banners');
+    const { data } = await axios.get(`${store.state.locale}/banners`);
     store.commit('SET_CAROUSELS', data);
     store.commit('SET_LOADING', false);
   },
