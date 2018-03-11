@@ -14,8 +14,7 @@ module.exports = {
       { hid: 'description', name: 'description', content: '昇儀股份有限公司 Sheng Yi Tech & Analytics Co., Ltd.' }
     ],
     link: [
-      { rel: 'icon', type: 'image/x-icon', href: '/favicon.ico' },
-      { rel: 'stylesheet', href: 'https://fonts.googleapis.com/earlyaccess/notosanstc.css' }
+      { rel: 'icon', type: 'image/x-icon', href: '/favicon.ico' }
     ]
   },
 
