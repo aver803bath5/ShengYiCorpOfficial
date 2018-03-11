@@ -2,7 +2,7 @@
 <div class="wrapper" v-loading="loading">
   <header>
     <h1>
-      最新消息
+      {{ $t('latestnews') }}
     </h1>
   </header>
   <div class="card-list-wrapper">
