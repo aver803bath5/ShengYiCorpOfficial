@@ -32,12 +32,12 @@
       <div class="icon-inner">
         <div class="icon">
           <a href="http://www.facebook.com.tw/shengyi82262680" target="_blank">
-            <fa-icon pack="fab" name="facebook" />
+            <font-awesome-icon :icon="['fab', 'facebook']" />
           </a>
         </div>
         <div class="icon">
           <a href="https://www.youtube.com/channel/UC8uzDamISeL_F1JQwsprB8g?view_as=subscriber" target="_blank">
-            <fa-icon pack="fab" name="youtube"></fa-icon>
+            <font-awesome-icon :icon="['fab', 'youtube']" />
           </a>
         </div>
       </div>

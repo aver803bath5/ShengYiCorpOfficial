@@ -52,15 +52,16 @@ module.exports = {
   modules: [
     // Doc: https://github.com/nuxt-community/axios-module#usage
     '@nuxtjs/axios',
-    'qonfucius-nuxt-fontawesome'
+    'nuxt-fontawesome'
+    // 'qonfucius-nuxt-fontawesome' <-坑貨
   ],
 
-  fontAwesome: {
-    packs: [
-      {
-        package: '@fortawesome/fontawesome-free-brands',
-        icons: ['faFacebook', 'faYoutube']
-      },
+  fontawesome: {
+    imports: [
+        {
+          set: '@fortawesome/fontawesome-free-brands',
+          icons: ['faFacebook', 'faYoutube']
+        }
     ],
   },
 
@@ -78,11 +79,19 @@ module.exports = {
     /*
     ** You can extend webpack config here
     */
-    vender: [
+    babel: {
+      presets: ['es2015', 'stage-0'],
+      plugins: ['transform-runtime']
+    },
+    vendor: [
+      'babel-polyfill',
+      'event-source-polyfill',
       'vue-i18n'
     ],
+
     extend(config, ctx) {
       // Run ESLint on save
+      config.resolve.alias['@fortawesome/fontawesome-free-brands$'] = '@fortawesome/fontawesome-free-brands/shakable.es.js'
       if (ctx.isDev && ctx.isClient) {
         config.module.rules.push({
           enforce: 'pre',
