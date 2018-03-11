@@ -64,12 +64,14 @@ export default {
     return {
       activeIndex: '1',
       activeIndex2: '1',
-      isToggled: false
+      isToggled: false,
+      // loading: false
     };
   },
   computed: {
     ...mapState([
-      'locale'
+      'locale',
+      'loading'
     ])
   },
   methods: {
@@ -77,9 +79,10 @@ export default {
     ...mapActions([
       'switchLocale'
     ]),
-    changeLang() {
-      this.switchLocale(this.locale);
-      this.$router.push(this.convertPath(this.$route.fullPath, this.locale));
+    async changeLang() {
+      if (this.loading === true) return false;
+      await this.switchLocale(this.locale);
+      await this.$router.push(this.convertPath(this.$route.fullPath, this.locale));
     }
   },
   components: {
@@ -181,12 +184,12 @@ h1 {
 }
 
 
-@media screen and (max-width: 950px) {
+@media screen and (max-width: 1000px) {
   .navbar-wrapper {
     position: fixed;
     width: 100%;
     top: 0;
-    /* z-index: 999; */
+    z-index: 999;
   }
 
   .toggle-menu-button-wrapper {
