@@ -71,6 +71,11 @@ html
   font-family: 'Noto Sans TC', sans-serif;
 }
 
+h1 {
+  color: #1f2d3d;
+  text-align: center;
+}
+
 a {
   text-decoration: none;
   display: block;

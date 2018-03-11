@@ -64,8 +64,7 @@ export default {
     return {
       activeIndex: '1',
       activeIndex2: '1',
-      isToggled: false,
-      // loading: false
+      isToggled: false
     };
   },
   computed: {

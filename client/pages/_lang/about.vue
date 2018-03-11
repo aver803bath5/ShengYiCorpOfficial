@@ -139,6 +139,7 @@ export default {
 
 <style scoped>
 img {
+  width: 100%;
   display: block;
   margin: auto;
 }
@@ -172,5 +173,11 @@ img {
 
 .cert-image {
   margin-top: 1rem;
+}
+
+@media screen and (max-width: 950px) {
+  .about-wrapper {
+    margin-top: 3rem;
+  }
 }
 </style>
