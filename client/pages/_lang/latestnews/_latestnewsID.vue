@@ -27,6 +27,10 @@ import convertPath from '@/utils/path';
 import toReadableTime from '@/utils/convertTimestamp';
 
 export default {
+  validate ({ params }) {
+    // Must be a number
+    return /^\d+$/.test(params.latestnewsID);
+  },
   async asyncData({ params, store }) {
     try {
       const { data } = await axios.get(`${store.state.locale}/news/${params.latestnewsID}`);
