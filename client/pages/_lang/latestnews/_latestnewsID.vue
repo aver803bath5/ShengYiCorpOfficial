@@ -35,6 +35,14 @@ export default {
       this.$message.error(e);
     }
   },
+  head () {
+    return {
+      title: this.latestnews.title,
+        meta: [
+          { hid: 'description', name: 'description', content: this.latestnews.content }
+      ]
+    }
+  },
   computed: {
     ...mapState([
       'locale'
