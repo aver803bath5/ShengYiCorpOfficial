@@ -7,7 +7,7 @@
   </header>
   <section>
     <el-row type="flex" class="products-list-row" justify="space-between">
-      <el-col :sm="{span:5}" :xs={span:24} v-for="item in 4" :key="item">
+      <el-col :md="{span: 5}" :sm="{span:11}" :xs={span:24} v-for="item in 4" :key="item">
         <nuxt-link to="google.com">
           <el-card class="product-card">
             <img src="http://www.shengyi.com.tw/api/upload/image/1503442406_272423_MicroRAE.jpg" class="image">
@@ -104,13 +104,11 @@ export default {
   width: 100%;
 }
 
-@media screen and (max-width: 950px) {
+@media screen and (max-width: 990px) {
   .products-list-row {
     padding: 1rem;
   }
-}
 
-@media screen and (max-width: 768px) {
   .product-card {
     margin-top: 1rem;
   }
