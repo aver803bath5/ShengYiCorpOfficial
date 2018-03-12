@@ -109,10 +109,6 @@ export default {
   margin: 0 auto;
 }
 
-h1 {
-  font-size: 2.5rem;
-}
-
 .card-list-wrapper {
   margin-top: .5rem;
   border: #eee 1px solid;
