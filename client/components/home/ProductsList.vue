@@ -6,7 +6,7 @@
     </h1>
   </header>
   <section>
-    <el-row type="flex" class="products-list-row" justify="space-between">
+    <el-row type="flex" class="products-list-row" justify="space-around">
       <el-col :md="{span: 5}" :sm="{span:11}" :xs={span:24} v-for="item in 4" :key="item">
         <nuxt-link to="google.com">
           <el-card class="product-card">
@@ -64,7 +64,7 @@ export default {
 
 <style scoped>
 .wrapper {
-  max-width: 1200px;
+  width: 80%;
   margin: 1rem auto;
 }
 
@@ -105,10 +105,6 @@ export default {
 }
 
 @media screen and (max-width: 990px) {
-  .products-list-row {
-    padding: 1rem;
-  }
-
   .product-card {
     margin-top: 1rem;
   }

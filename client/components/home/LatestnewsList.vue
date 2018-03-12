@@ -104,8 +104,7 @@ export default {
 
 <style scoped>
 .wrapper {
-  max-width: 1200px;
-  padding: 1rem;
+  width: 80%;
   margin: 0 auto;
 }
 
