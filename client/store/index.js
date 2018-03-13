@@ -2,7 +2,9 @@ export const state = () => ({
   locales: ['tw', 'en'],
   locale: 'tw',
   carousels: [],
-  loading: false
+  loading: false,
+  productsListCategories: [],
+  productsListProducts: []
 })
 
 export const actions = {
@@ -24,5 +26,11 @@ export const mutations = {
   },
   SET_LOADING(state, loading) {
     state.loading = loading;
+  },
+  SET_PRODUCTSLISTCATEGORIES(state, categories) {
+    state.productsListCategories = categories;
+  },
+  SET_PRODUCTSLISTPRODUCTS(state, products) {
+    state.productsListProducts = products;
   }
 }
