@@ -1,11 +1,11 @@
 <template>
 <div class="wrapper">
   <el-row  :gutter="20">
-    <el-col :span="6">
+    <el-col :sm="{span:6}" :xs="{span:24}">
       <search-input></search-input>
-      <products-cats-card></products-cats-card>
+      <products-cats-card class="products-card"></products-cats-card>
     </el-col>
-    <el-col :span="17" class="product-display-wrapper">
+    <el-col :sm="{span:17}" :xs="{span:24}" class="product-display-wrapper">
       <products-display></products-display>
       <products-pagination></products-pagination>
     </el-col>
@@ -71,9 +71,15 @@ export default {
   padding: 1rem;
 }
 
-@media screen and (max-width: 950px) {
+@media screen and (max-width: 1000px) {
   .wrapper {
-     margin-top: 4.5rem;
+     margin-top: 3rem;
+  }
+}
+
+@media screen and (max-width: 768px) {
+  .products-card {
+    display: none;
   }
 }
 

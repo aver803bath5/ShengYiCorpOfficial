@@ -1,6 +1,6 @@
 <template>
   <div class="search-input-wrapper">
-    <el-input placeholder="搜尋產品名稱/型號" v-model="inputText" @keydown.native.enter="doSearch">
+    <el-input :placeholder="$t('products-search-placeholder')" v-model="inputText" @keydown.native.enter="doSearch">
       <el-button slot="append" icon="el-icon-search" @click="doSearch"></el-button>
     </el-input>
   </div>
