@@ -2,14 +2,20 @@
   <div class="cats-card-wrapper">
     <ul class="cats-card">
       <li>
-        <nuxt-link class="cat-link" :to="convertPath('/products-list/0/1/', locale)">
-          {{ $t('products-all') }}
-        </nuxt-link>
+        <el-tooltip placement="right">
+          <div slot="content">{{ $t('products-all') }}</div>
+          <nuxt-link class="cat-link" :to="convertPath('/products-list/0/1/', locale)">
+            <span>{{ $t('products-all') }}</span>
+          </nuxt-link>
+        </el-tooltip>
       </li>
       <li v-for="cat in productsListCategories" :key="cat.id">
-        <nuxt-link class="cat-link" :to="convertPath(`/products-list/${cat.id}/1/`, locale)">
-          {{ cat.name }}
-        </nuxt-link>
+          <el-tooltip placement="right">
+            <div slot="content">{{ cat.name }}</div>
+            <nuxt-link class="cat-link" :to="convertPath(`/products-list/${cat.id}/1/`, locale)">
+              <span>{{ cat.name }}</span>
+            </nuxt-link>
+          </el-tooltip>
       </li>
     </ul>
   </div>
