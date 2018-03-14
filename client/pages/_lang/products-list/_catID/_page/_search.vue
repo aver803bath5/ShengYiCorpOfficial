@@ -1,9 +1,11 @@
 <template>
+<div class="wrapper">
   <header>
     <h1>
       產品介紹
     </h1>
   </header>
+</div>
 </template>
 
 <script>
