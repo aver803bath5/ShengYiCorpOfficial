@@ -4,7 +4,11 @@ export const state = () => ({
   carousels: [],
   loading: false,
   productsListCategories: [],
-  productsListProducts: []
+  productsListProducts: [],
+  productsListSearchText: '',
+  productsListTotal: 0,
+  productsListCurtPage: 1,
+  productsListCurtCatID: 0
 })
 
 export const actions = {
@@ -32,5 +36,17 @@ export const mutations = {
   },
   SET_PRODUCTSLISTPRODUCTS(state, products) {
     state.productsListProducts = products;
+  },
+  SET_PRODUCTSLISTTOTAL(state, total) {
+    state.productsListTotal = total;
+  },
+  SET_PRODUCTSLISTSEARCHTEXT(state, text) {
+    state.productsListSearchText = text;
+  },
+  SET_PRODUCTSLISTCURTPAGE(state, page) {
+    state.productsListCurtPage = page;
+  },
+  SET_PRODUCTSLISTCURTCATID(state, catID) {
+    state.productsListCurtCatID = catID;
   }
 }

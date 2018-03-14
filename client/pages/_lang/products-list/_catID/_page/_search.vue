@@ -7,6 +7,7 @@
     </el-col>
     <el-col :span="17" class="product-display-wrapper">
       <products-display></products-display>
+      <products-pagination></products-pagination>
     </el-col>
   </el-row>
 </div>
@@ -17,6 +18,7 @@ import axios from '~/plugins/axios';
 import SearchInput from '~/components/products/SearchInput';
 import ProductsCatsCard from '~/components/products/ProductsCatsCard';
 import ProductsDisplay from '~/components/products/ProductsDisplay';
+import ProductsPagination from '~/components/products/ProductsPagination';
 
 export default {
   validate({ params }) {
@@ -32,17 +34,32 @@ export default {
         category: params.catID,
         page: params.page,
         count: 12,
-        name: params.search ? params.search : ''
+        name: params.search
+      }
+    });
+    const totalRes = await axios.get(`${store.state.locale}/products/total`, {
+      params: {
+        category: params.catID,
+        name: params.search
       }
     });
     store.commit('SET_PRODUCTSLISTCATEGORIES', catRes.data.categories);
     store.commit('SET_PRODUCTSLISTPRODUCTS', productsRes.data.products);
+    // catID
+    store.commit('SET_PRODUCTSLISTCURTCATID', params.catID);
+    // total
+    store.commit('SET_PRODUCTSLISTTOTAL', totalRes.data.total);
+    // search text
+    store.commit('SET_PRODUCTSLISTSEARCHTEXT', params.search);
+    // curt page
+    store.commit('SET_PRODUCTSLISTCURTPAGE', params.page);
     store.commit('SET_LOADING', false);
   },
   components: {
     SearchInput,
     ProductsCatsCard,
-    ProductsDisplay
+    ProductsDisplay,
+    ProductsPagination
   }
 };
 </script>
