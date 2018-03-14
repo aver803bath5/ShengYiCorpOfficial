@@ -1,15 +1,11 @@
 <template>
 <div class="wrapper">
-  <header>
-    <h1>
-      產品介紹
-    </h1>
-  </header>
-  <el-row>
+  <el-row  :gutter="20">
     <el-col :span="6">
       <products-cats-card></products-cats-card>
     </el-col>
-    <el-col :span="17">
+    <el-col :span="17" class="product-display-wrapper">
+      <products-display></products-display>
     </el-col>
   </el-row>
 </div>
@@ -18,6 +14,7 @@
 <script>
 import axios from '~/plugins/axios';
 import ProductsCatsCard from '~/components/products/ProductsCatsCard';
+import ProductsDisplay from '~/components/products/ProductsDisplay';
 
 export default {
   validate({ params }) {
@@ -41,7 +38,8 @@ export default {
     store.commit('SET_LOADING', false);
   },
   components: {
-    ProductsCatsCard
+    ProductsCatsCard,
+    ProductsDisplay
   }
 };
 </script>
