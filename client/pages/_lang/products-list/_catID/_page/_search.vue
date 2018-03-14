@@ -2,6 +2,7 @@
 <div class="wrapper">
   <el-row  :gutter="20">
     <el-col :span="6">
+      <search-input></search-input>
       <products-cats-card></products-cats-card>
     </el-col>
     <el-col :span="17" class="product-display-wrapper">
@@ -13,6 +14,7 @@
 
 <script>
 import axios from '~/plugins/axios';
+import SearchInput from '~/components/products/SearchInput';
 import ProductsCatsCard from '~/components/products/ProductsCatsCard';
 import ProductsDisplay from '~/components/products/ProductsDisplay';
 
@@ -30,7 +32,7 @@ export default {
         category: params.catID,
         page: params.page,
         count: 12,
-        name: params.search ? '' : params.search
+        name: params.search ? params.search : ''
       }
     });
     store.commit('SET_PRODUCTSLISTCATEGORIES', catRes.data.categories);
@@ -38,6 +40,7 @@ export default {
     store.commit('SET_LOADING', false);
   },
   components: {
+    SearchInput,
     ProductsCatsCard,
     ProductsDisplay
   }

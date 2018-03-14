@@ -52,6 +52,7 @@ a {
   background-color: #eef1f6;
   box-shadow: 2px 2px 2px #aaa;
   max-height: 500px;
+  margin-top: .5rem;
 }
 
 .cat-link {
