@@ -6,8 +6,14 @@
           <el-card :body-style="{ padding: '0px' }">
             <img :src="product.picture" class="image">
             <div class="product-text">
-              <h3>{{ product.name }}</h3>
-              <h3>{{ product.model }}</h3>
+              <el-tooltip placement="top">
+                <div slot="content" class="popover-text">{{ product.name }}</div>
+                <div slot="content" class="popover-text">{{ product.model }}</div>
+                <div>
+                  <h3>{{ product.name }}</h3>
+                  <h3>{{ product.model }}</h3>
+                </div>
+              </el-tooltip>
             </div>
           </el-card>
         </nuxt-link>
@@ -62,5 +68,11 @@ img {
   text-align: center;
   font-size: 3rem;
   font-weight: 200;
+}
+
+.popover-text {
+  text-align: center;
+  padding: .2rem;
+  font-size: 1rem;
 }
 </style>
