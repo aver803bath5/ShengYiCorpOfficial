@@ -8,7 +8,11 @@ export const state = () => ({
   productsListSearchText: '',
   productsListTotal: 0,
   productsListCurtPage: 1,
-  productsListCurtCatID: 0
+  productsListCurtCatID: 0,
+  gasProducts: [],
+  gasProductsTags: [],
+  gasProductsTagsHtml: [],
+  curtGasName: ''
 })
 
 export const actions = {
@@ -48,5 +52,17 @@ export const mutations = {
   },
   SET_PRODUCTSLISTCURTCATID(state, catID) {
     state.productsListCurtCatID = catID;
+  },
+  SET_GASPRODUCTS(state, products) {
+    state.gasProducts = products;
+  },
+  SET_GASPRODUCTSTAGS(state, tags) {
+    state.gasProductsTags = tags;
+  },
+  SET_GASPRODUCTSTAGSHTML(state, html) {
+    state.gasProductsTagsHtml = html;
+  },
+  SET_CURTGASNAME(state, gasName) {
+    state.curtGasName = gasName;
   }
 }
