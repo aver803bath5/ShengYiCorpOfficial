@@ -1,5 +1,5 @@
 <template>
-<div class="wrapper">
+<div class="wrapper" v-loading="loading">
   <header>
     <h1>
       {{ $t('product_instruction') }}
@@ -39,6 +39,7 @@ export default {
   },
   data() {
     return {
+      loading: false,
       productsList: []
     };
   },
@@ -51,9 +52,12 @@ export default {
     convertPath,
     async getProductsList() {
       try {
+        this.loading = true;
         const { data } = await axios.get(`${this.locale}/products/stick`);
         this.productsList = data.products;
+        this.loading = false;
       } catch (error) {
+        this.loaidng = false;
         this.$message.error('Error Occured!');
       }
     },
