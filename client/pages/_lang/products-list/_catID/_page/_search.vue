@@ -80,7 +80,7 @@ export default {
 
 @media screen and (max-width: 1000px) {
   .wrapper {
-     margin-top: 3rem;
+     margin-top: 3.5rem;
   }
 
   .products-select {
@@ -91,5 +91,4 @@ export default {
     display: none;
   }
 }
-
 </style>

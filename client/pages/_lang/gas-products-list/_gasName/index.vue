@@ -2,6 +2,7 @@
 <div class="wrapper">
   <el-row  :gutter="20">
     <el-col :sm="{span:6}" :xs="{span:24}">
+      <products-select class="products-select"></products-select>
       <product-card class="products-card"></product-card>
     </el-col>
     <el-col :sm="{span:17}" :xs="{span:24}" class="product-display-wrapper">
@@ -13,6 +14,7 @@
 
 <script>
 import axios from '~/plugins/axios';
+import ProductsSelect from '~/components/gas-products/ProductsSelect';
 import ProductCard from '~/components/gas-products/ProductsCatsCard';
 import ProductsDisplay from '~/components/gas-products/ProductsDisplay';
 
@@ -35,6 +37,7 @@ export default {
     store.commit('SET_LOADING', false);
   },
   components: {
+    ProductsSelect,
     ProductCard,
     ProductsDisplay
   }
@@ -48,16 +51,23 @@ export default {
   padding: 1rem;
 }
 
+.products-select {
+  display: none;
+}
+
 @media screen and (max-width: 1000px) {
   .wrapper {
-     margin-top: 3rem;
+     margin-top: 3.5rem;
   }
 }
 
 @media screen and (max-width: 768px) {
+  .products-select {
+    display: block;
+  }
+
   .products-card {
     display: none;
   }
 }
-
 </style>

@@ -1,5 +1,5 @@
 <template>
-  <div>
+  <div class="product-display-wrapper">
     <el-row type="flex" :gutter="20" class="product-display-row" justify="space-around" v-if="gasProducts.length != 0">
       <el-col v-for="product in gasProducts" :key="product.id"  :xs="{span:24}" :sm="{span:8}" class="product-card-wrapper">
         <nuxt-link :to="convertPath(`/gas-product/${product.id}`, locale)">
@@ -41,6 +41,10 @@ export default {
 </script>
 
 <style scoped>
+.product-display-wrapper {
+  margin-top: -1rem;
+}
+
 a {
   display: block;
 }
@@ -74,5 +78,11 @@ img {
   text-align: center;
   padding: .2rem;
   font-size: 1rem;
+}
+
+@media screen and (max-width: 768px){
+  .product-display-wrapper {
+    margin-top: 0;
+  }
 }
 </style>
