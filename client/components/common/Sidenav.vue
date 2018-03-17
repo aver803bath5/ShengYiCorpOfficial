@@ -1,32 +1,32 @@
 <template>
   <div class="side-navbar-wrapper">
     <el-menu :default-active="activeIndex" class="side-navbar">
-      <el-menu-item index="1">
+      <el-menu-item index="1"  @click="toggleNavMenu">
         <nuxt-link :to="convertPath('/', locale)">
           {{ $t('navbar.home') }}
         </nuxt-link>
       </el-menu-item>
-      <el-menu-item index="2">
+      <el-menu-item index="2"  @click="toggleNavMenu">
         <nuxt-link :to="convertPath('/about', locale)">
           {{ $t('navbar.about') }}
         </nuxt-link>
       </el-menu-item>
-      <el-menu-item index="3">
-        <nuxt-link :to="convertPath('/products', locale)">
+      <el-menu-item index="3"  @click="toggleNavMenu">
+        <nuxt-link :to="convertPath('/products-list/0/1', locale)">
           {{ $t('navbar.products') }}
         </nuxt-link>
       </el-menu-item>
-      <el-menu-item index="4">
-        <nuxt-link :to="convertPath('/gas-products', locale)">
+      <el-menu-item index="4"  @click="toggleNavMenu">
+        <nuxt-link :to="convertPath('/gas-products-list/', locale)">
           {{ $t('navbar.gas-products') }}
         </nuxt-link>
       </el-menu-item>
-      <el-menu-item index="5">
+      <el-menu-item index="5"  @click="toggleNavMenu">
         <nuxt-link :to="convertPath('/brands', locale)">
           {{ $t('navbar.brands') }}
         </nuxt-link>
       </el-menu-item>
-      <el-menu-item index="6">
+      <el-menu-item index="6"  @click="toggleNavMenu">
         <nuxt-link :to="convertPath('/contact', locale)">
           {{ $t('navbar.contact') }}
         </nuxt-link>
@@ -54,12 +54,15 @@ export default {
   methods: {
     convertPath,
     ...mapActions([
-      'switchLocale'
+      'switchLocale',
+      'toggleNavMenu'
     ]),
-    changeLang() {
-      this.switchLocale(this.locale);
-      this.$router.push(this.convertPath(this.$route.fullPath, this.locale));
-    },
+    async changeLang() {
+      if (this.loading === true) return false;
+      await this.switchLocale(this.locale);
+      this.toggleNavMenu();
+      await this.$router.push(this.convertPath(this.$route.fullPath, this.locale));
+    }
   },
 }
 </script>

@@ -26,10 +26,10 @@
         <el-menu-item :index="convertPath('/about', locale)">
           {{ $t('navbar.about') }}
         </el-menu-item>
-        <el-menu-item :index="convertPath('/products', locale)">
+        <el-menu-item :index="convertPath('/products-list/0/1', locale)">
           {{ $t('navbar.products') }}
         </el-menu-item>
-        <el-menu-item :index="convertPath('/gas-products', locale)">
+        <el-menu-item :index="convertPath('/gas-products-list/', locale)">
           {{ $t('navbar.gas-products') }}
         </el-menu-item>
         <el-menu-item :index="convertPath('/brands', locale)">
@@ -40,7 +40,7 @@
         </el-menu-item>
         <el-menu-item index="" @click="changeLang">{{ $t('navbar.lang') }}</el-menu-item>
       </div>
-      <div class="toggle-menu-button-wrapper" :class="{open: isToggled}" @click="isToggled = !isToggled">
+      <div class="toggle-menu-button-wrapper" :class="{open: navMenuShow}" @click="toggleNavMenu">
         <span></span>
         <span></span>
         <span></span>
@@ -48,7 +48,7 @@
     </div>
   </el-menu>
   <el-collapse-transition>
-    <sidenav v-show="isToggled"></sidenav>
+    <sidenav v-show="navMenuShow"></sidenav>
   </el-collapse-transition>
 </div>
 
@@ -63,20 +63,21 @@ export default {
   data() {
     return {
       activeIndex: '1',
-      activeIndex2: '1',
-      isToggled: false
+      activeIndex2: '1'
     };
   },
   computed: {
     ...mapState([
       'locale',
-      'loading'
+      'loading',
+      'navMenuShow'
     ])
   },
   methods: {
     convertPath,
     ...mapActions([
-      'switchLocale'
+      'switchLocale',
+      'toggleNavMenu'
     ]),
     async changeLang() {
       if (this.loading === true) return false;

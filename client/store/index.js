@@ -2,6 +2,7 @@ export const state = () => ({
   locales: ['tw', 'en'],
   locale: 'tw',
   carousels: [],
+  navMenuShow: false,
   loading: false,
   productsListCategories: [],
   productsListProducts: [],
@@ -19,6 +20,9 @@ export const actions = {
   switchLocale({ commit, state }) {
     const locale = (state.locale === 'tw') ? 'en' : 'tw';
     commit('SET_LANG', locale);
+  },
+  toggleNavMenu({ commit, state }) {
+    commit('SET_NAVMENUSHOW', !state.navMenuShow);
   }
 };
 
@@ -28,6 +32,9 @@ export const mutations = {
     if (state.locales.indexOf(locale) !== -1) {
       state.locale = locale;
     }
+  },
+  SET_NAVMENUSHOW(state, show) {
+    state.navMenuShow = show;
   },
   SET_CAROUSELS(state, carousels) {
     state.carousels = carousels;
