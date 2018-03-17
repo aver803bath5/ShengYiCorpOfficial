@@ -80,6 +80,7 @@
       "out-of-range": "Out of amount limit of charaters"
     }
   },
+  "submit-success": "Submit Success!",
   "submit": "Submit",
   "reset": "Reset"
 }

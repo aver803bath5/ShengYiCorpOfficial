@@ -80,6 +80,7 @@
       "out-of-range": "超過字數限制"
     }
   },
+  "submit-success": "送出成功！",
   "submit": "送出",
   "reset": "重寫"
 }

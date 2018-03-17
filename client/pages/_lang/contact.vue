@@ -1,5 +1,5 @@
 <template>
-  <div class="wrapper" v-loading="loading">
+  <div class="wrapper" v-loading.fullscreen="loading">
     <header>
       <h1>
         {{ $t('navbar.contact') }}
@@ -86,7 +86,7 @@ export default {
           tel: this.form.phone,
           message: this.form.message
         });
-        this.$message.success('Success!');
+        this.$message.success(this.$t('submit-success'));
         this.loading = false;
       } catch (error) {
         this.loading = false;
