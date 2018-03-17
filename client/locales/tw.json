@@ -57,5 +57,29 @@
     "certification": {
       "title": "認證"
     }
-  }
+  },
+  "contact": {
+    "form-placeholder": {
+      "name": "姓名",
+      "phone": "電話",
+      "company": "公司名稱",
+      "email": "Email",
+      "fax": "傳真",
+      "message": "留言"
+    },
+    "rules": {
+      "name": {
+        "required": "名字不得為空"
+      },
+      "phone": {
+        "required": "電話不得為空"
+      },
+      "message": {
+        "required": "留言不得為空"
+      },
+      "out-of-range": "超過字數限制"
+    }
+  },
+  "submit": "送出",
+  "reset": "重寫"
 }

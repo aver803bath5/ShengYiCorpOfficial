@@ -57,5 +57,29 @@
     "certification": {
       "title": "Certification"
     }
-  }
+  },
+  "contact": {
+    "form-placeholder": {
+      "name": "Name",
+      "phone": "TEL",
+      "company": "Company Name",
+      "email": "Email",
+      "fax": "FAX",
+      "message": "Message"
+    },
+    "rules": {
+      "name": {
+        "required": "Your Name Must Not Be Empty"
+      },
+      "phone": {
+        "required": "TEL Can Not Be Empty"
+      },
+      "message": {
+        "required": "Message Must Not Be Empty"
+      },
+      "out-of-range": "Out of amount limit of charaters"
+    }
+  },
+  "submit": "Submit",
+  "reset": "Reset"
 }
