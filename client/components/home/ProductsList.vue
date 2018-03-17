@@ -7,16 +7,16 @@
   </header>
   <section>
     <el-row type="flex" class="products-list-row" justify="space-around">
-      <el-col :md="{span: 5}" :sm="{span:11}" :xs={span:24} v-for="item in 4" :key="item">
-        <nuxt-link to="google.com">
-          <el-card class="product-card">
-            <img src="http://www.shengyi.com.tw/api/upload/image/1503442406_272423_MicroRAE.jpg" class="image">
+      <el-col :md="{span: 5}" :sm="{span:11}" :xs={span:24} v-for="product in productsList" :key="product.id">
+        <nuxt-link :to="convertPath(`/product/${product.id}`, locale)">
+          <el-card class="product-card" :body-style="{ padding: '0px' }">
+            <img :src="product.picture" class="image">
             <div class="product-text">
               <el-tooltip placement="top">
-                <div slot="content" class="popover-text-box">productname<br/>product model</div>
+                <div slot="content" class="popover-text-box">{{ product.name }}<br/>{{ product.model }}</div>
                   <div>
-                    <h3 class="product-name">productname</h3>
-                    <h4 class="product-model">product model</h4>
+                    <h3 class="product-name">{{ product.name }}</h3>
+                    <h4 class="product-model">{{ product.model }}</h4>
                   </div>
               </el-tooltip>
             </div>
@@ -31,6 +31,7 @@
 <script>
 import axios from '~/plugins/axios';
 import { mapState } from 'vuex';
+import convertPath from '~/utils/path';
 
 export default {
   mounted() {
@@ -47,10 +48,11 @@ export default {
     ])
   },
   methods: {
+    convertPath,
     async getProductsList() {
       try {
         const { data } = await axios.get(`${this.locale}/products/stick`);
-        this.productsList = data.proudcts;
+        this.productsList = data.products;
       } catch (error) {
         this.$message.error('Error Occured!');
       }
