@@ -104,13 +104,9 @@ export default {
 
 <style scoped>
 .wrapper {
-  max-width: 1200px;
+  width: 80%;
   padding: 1rem;
   margin: 0 auto;
-}
-
-h1 {
-  font-size: 2.5rem;
 }
 
 .card-list-wrapper {

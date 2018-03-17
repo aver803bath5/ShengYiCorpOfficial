@@ -1,12 +1,14 @@
 <template>
   <div class="wrapper">
     <carousel></carousel>
+    <products-list></products-list>
     <latestnews-list></latestnews-list>
   </div>
 </template>
 
 <script>
 import Carousel from '@/components/home/Carousel';
+import ProductsList from '@/components/home/ProductsList';
 import LatestnewsList from '@/components/home/LatestnewsList';
 import axios from '~/plugins/axios';
 
@@ -24,6 +26,7 @@ export default {
   },
   components: {
     Carousel,
+    ProductsList,
     LatestnewsList
   }
 }
