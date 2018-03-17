@@ -1,5 +1,6 @@
 {
   "products-all": "全部",
+  "products-select-placeholder": "請選擇產品種類",
   "products-no-products": "目前沒有該種類產品",
   "products-search-placeholder": "搜尋產品名稱/型號",
   "gas-products-no-products": "請選擇氣體",

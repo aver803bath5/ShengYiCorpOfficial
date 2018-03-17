@@ -1,11 +1,12 @@
 <template>
 <div class="wrapper">
   <el-row  :gutter="20">
-    <el-col :sm="{span:6}" :xs="{span:24}">
+    <el-col :md="{span:6}" :sm="{span:24}">
       <search-input></search-input>
+      <proudcts-select class="products-select"></proudcts-select>
       <products-cats-card class="products-card"></products-cats-card>
     </el-col>
-    <el-col :sm="{span:17}" :xs="{span:24}" class="product-display-wrapper">
+    <el-col :md="{span:17}" :sm="{span:24}" class="product-display-wrapper">
       <products-display></products-display>
       <products-pagination></products-pagination>
     </el-col>
@@ -16,6 +17,7 @@
 <script>
 import axios from '~/plugins/axios';
 import SearchInput from '~/components/products/SearchInput';
+import ProudctsSelect from '~/components/products/ProductsSelect';
 import ProductsCatsCard from '~/components/products/ProductsCatsCard';
 import ProductsDisplay from '~/components/products/ProductsDisplay';
 import ProductsPagination from '~/components/products/ProductsPagination';
@@ -57,6 +59,7 @@ export default {
   },
   components: {
     SearchInput,
+    ProudctsSelect,
     ProductsCatsCard,
     ProductsDisplay,
     ProductsPagination
@@ -71,13 +74,19 @@ export default {
   padding: 1rem;
 }
 
+.products-select {
+  display: none;
+}
+
 @media screen and (max-width: 1000px) {
   .wrapper {
      margin-top: 3rem;
   }
-}
 
-@media screen and (max-width: 768px) {
+  .products-select {
+    display: block;
+  }
+
   .products-card {
     display: none;
   }
