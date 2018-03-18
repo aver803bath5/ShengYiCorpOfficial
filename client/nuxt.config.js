@@ -90,7 +90,8 @@ module.exports = {
     vendor: [
       'babel-polyfill',
       'event-source-polyfill',
-      'vue-i18n'
+      'vue-i18n',
+      '@/assets/js/flexibility.js'
     ],
 
     extend(config, ctx) {

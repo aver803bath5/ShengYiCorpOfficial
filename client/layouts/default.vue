@@ -1,7 +1,7 @@
 <template>
   <div>
     <navbar/>
-    <nuxt/>
+    <nuxt id="nuxt-app"/>
     <my-footer/>
   </div>
 </template>
@@ -19,4 +19,7 @@ export default {
 </script>
 
 <style>
+#nuxt-app {
+  min-height: 100vh;
+}
 </style>
