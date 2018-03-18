@@ -31,7 +31,7 @@
           {{ $t('navbar.contact') }}
         </nuxt-link>
       </el-menu-item>
-      <el-menu-item index="7" @click="changeLang">{{ $t('navbar.lang') }}</el-menu-item>
+      <el-menu-item v-if="showLang" index="7" @click="changeLang">{{ $t('navbar.lang') }}</el-menu-item>
     </el-menu>
   </div>
 </template>
@@ -39,6 +39,7 @@
 <script>
 import convertPath from '@/utils/path';
 import { mapActions, mapState } from 'vuex';
+import showLang from '@/utils/showLang';
 
 export default {
   data() {
@@ -50,6 +51,7 @@ export default {
     ...mapState([
       'locale'
     ]),
+    showLang
   },
   methods: {
     convertPath,

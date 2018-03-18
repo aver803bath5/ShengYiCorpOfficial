@@ -38,7 +38,7 @@
         <el-menu-item :index="convertPath('/contact', locale)">
           {{ $t('navbar.contact') }}
         </el-menu-item>
-        <el-menu-item index="" @click="changeLang">{{ $t('navbar.lang') }}</el-menu-item>
+        <el-menu-item v-if="showLang" index="" @click="changeLang">{{ $t('navbar.lang') }}</el-menu-item>
       </div>
       <div class="toggle-menu-button-wrapper" :class="{open: navMenuShow}" @click="toggleNavMenu">
         <span></span>
@@ -58,6 +58,7 @@
 import { mapState, mapActions } from 'vuex';
 import convertPath from '@/utils/path';
 import Sidenav from '@/components/common/Sidenav';
+import showLang from '@/utils/showLang';
 
 export default {
   data() {
@@ -71,7 +72,8 @@ export default {
       'locale',
       'loading',
       'navMenuShow'
-    ])
+    ]),
+    showLang
   },
   methods: {
     convertPath,
