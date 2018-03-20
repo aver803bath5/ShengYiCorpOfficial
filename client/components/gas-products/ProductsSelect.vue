@@ -10,6 +10,7 @@
         :key="tag"
         :label="tag"
         :value="gasProductsTags[index]">
+        <span v-html="tag"></span>
       </el-option>
     </el-select>
   </div>

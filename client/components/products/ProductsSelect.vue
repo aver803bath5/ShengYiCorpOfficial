@@ -10,6 +10,7 @@
         :key="cat.id"
         :label="cat.name"
         :value="cat.id">
+        <span v-html="cat.name"></span>
       </el-option>
     </el-select>
   </div>

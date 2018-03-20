@@ -11,9 +11,9 @@
       </li>
       <li v-for="cat in productsListCategories" :key="cat.id">
           <el-tooltip placement="right">
-            <div slot="content">{{ cat.name }}</div>
+            <div slot="content" v-html="cat.name"></div>
             <nuxt-link class="cat-link" :to="convertPath(`/products-list/${cat.id}/1/`, locale)">
-              <span>{{ cat.name }}</span>
+              <span v-html="cat.name"></span>
             </nuxt-link>
           </el-tooltip>
       </li>

@@ -7,11 +7,11 @@
             <img :src="product.picture" class="image">
             <div class="product-text">
               <el-tooltip placement="top">
-                <div slot="content" class="popover-text">{{ product.name }}</div>
-                <div slot="content" class="popover-text">{{ product.model }}</div>
+                <div slot="content" class="popover-text" v-html="product.name"></div>
+                <div slot="content" class="popover-text" v-html="product.model"></div>
                 <div>
-                  <h3>{{ product.name }}</h3>
-                  <h3>{{ product.model }}</h3>
+                  <h3 v-html="product.name"></h3>
+                  <h3 v-html="product.model"></h3>
                 </div>
               </el-tooltip>
             </div>
