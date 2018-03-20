@@ -53,6 +53,7 @@ a {
   box-shadow: 2px 2px 2px #aaa;
   max-height: 500px;
   margin-top: .5rem;
+  overflow: auto;
 }
 
 .cat-link {
