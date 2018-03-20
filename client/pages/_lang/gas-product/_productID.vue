@@ -18,8 +18,7 @@
       <section>
         <img :src="product.picture" :alt="product.name">
       </section>
-      <section class="products-descr-wrapper">
-        {{ product.description }}
+      <section class="products-descr-wrapper" v-html="product.description">
       </section>
     </article>
   </div>

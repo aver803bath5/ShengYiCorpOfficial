@@ -11,8 +11,7 @@
         {{ latestnews.editTime | toReadableTime(locale) }}
       </div>
     </div>
-    <article>
-      {{ latestnews.content }}
+    <article v-html="latestnews.content">
     </article>
   </el-card>
 
