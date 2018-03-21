@@ -2,7 +2,7 @@
   <div class="product-display-wrapper">
     <el-row type="flex" :gutter="20" class="product-display-row" justify="space-around" v-if="gasProducts.length != 0">
       <el-col v-for="product in gasProducts" :key="product.id"  :xs="{span:24}" :sm="{span:8}" class="product-card-wrapper">
-        <nuxt-link :to="convertPath(`/gas-product/${product.id}`, locale)">
+        <nuxt-link :to="convertPath(`/gas/product/${product.id}`, locale)">
           <el-card :body-style="{ padding: '0px' }">
             <img :src="product.picture" class="image">
             <div class="product-text">

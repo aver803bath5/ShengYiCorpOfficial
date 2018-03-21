@@ -1,4 +1,5 @@
 const pkg = require('./package')
+const serveStatic = require('serve-static')
 
 module.exports = {
   mode: 'universal',
@@ -75,6 +76,12 @@ module.exports = {
   axios: {
     // See https://github.com/nuxt-community/axios-module#options
   },
+
+
+  serverMiddleware: [
+    // We can create custom instances too
+    { path: '/admin', handler: serveStatic(__dirname + '/admin') }
+  ],
 
   /*
   ** Build configuration

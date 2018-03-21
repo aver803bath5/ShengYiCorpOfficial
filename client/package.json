@@ -26,6 +26,8 @@
     "element-ui": "^2.1.0",
     "event-source-polyfill": "^0.0.12",
     "koa": "^2.3.0",
+    "koa-router": "^7.4.0",
+    "koa-static": "^4.0.2",
     "moment": "^2.21.0",
     "nuxt": "^1.0.0",
     "nuxt-fontawesome": "^0.1.3",

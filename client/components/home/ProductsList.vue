@@ -8,7 +8,7 @@
   <section>
     <el-row type="flex" class="products-list-row" justify="space-around">
       <el-col :md="{span: 5}" :sm="{span:11}" :xs={span:24} v-for="product in productsList" :key="product.id">
-        <nuxt-link :to="convertPath(`/product/${product.id}`, locale)">
+        <nuxt-link :to="convertPath(`/products/${product.id}`, locale)">
           <el-card class="product-card" :body-style="{ padding: '0px' }">
             <img :src="product.picture" class="image">
             <div class="product-text">
