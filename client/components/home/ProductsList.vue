@@ -13,11 +13,12 @@
             <img :src="product.picture" class="image">
             <div class="product-text">
               <el-tooltip placement="top">
-                <div slot="content" class="popover-text-box">{{ product.name }}<br/>{{ product.model }}</div>
-                  <div>
-                    <h3 class="product-name">{{ product.name }}</h3>
-                    <h4 class="product-model">{{ product.model }}</h4>
-                  </div>
+                <div slot="content" class="popover-text" v-html="product.name"></div>
+                <div slot="content" class="popover-text" v-html="product.model"></div>
+                <div>
+                  <h3 v-html="product.name"></h3>
+                  <h3 v-html="product.model"></h3>
+                </div>
               </el-tooltip>
             </div>
           </el-card>
