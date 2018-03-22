@@ -8,7 +8,7 @@
     <section>
       <el-row type="flex" class="brands-row" justify="space-between" :gutter="20">
         <el-col :sm="{span:8}" :xs="{span:24}" v-for="brand in brands" :key="brand.id" >
-          <a :to="brand.link" class="brand-link" target="_blank">
+          <a :href="brand.link" class="brand-link" target="_blank">
             <img :src="brand.picture" :alt="brand.link">
           </a>
         </el-col>
