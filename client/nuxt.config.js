@@ -80,7 +80,9 @@ module.exports = {
 
   serverMiddleware: [
     // We can create custom instances too
-    { path: '/admin', handler: serveStatic(__dirname + '/admin') }
+    { path: '/admin', handler: serveStatic(__dirname + '/admin') },
+    { path: '/admin/login', handler: serveStatic(__dirname + '/admin') },
+    { path: '/static', handler: serveStatic(__dirname + '/static') }
   ],
 
   /*
