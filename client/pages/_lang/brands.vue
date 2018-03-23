@@ -1,5 +1,5 @@
 <template>
-  <div class="wrapper" id="brandWrapper">
+  <div class="wrapper">
     <header>
       <h1>
         {{ $t('navbar.brands') }}
@@ -22,12 +22,14 @@ import axios from '~/plugins/axios';
 
 export default {
   mounted() {
-    const brandWrapper = document.getElementById('brandWrapper');
-    brandWrapper.addEventListener('contextmenu', event => event.preventDefault());
+    document.addEventListener('contextmenu', event => event.preventDefault());
   },
   async asyncData({ store }) {
     const { data } = await axios.get(`${store.state.locale}/brands`);
     return { brands: data.brands };
+  },
+  destroyed() {
+    document.removeEventListener('contextmenu', event => event.preventDefault());
   }
 }
 </script>
