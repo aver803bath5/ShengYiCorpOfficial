@@ -71,7 +71,7 @@ export default {
 
 <style scoped>
   .side-navbar a, .side-navbar li {
-    color: #909399;
+    color: #606266;
     text-align: center;
   }
 

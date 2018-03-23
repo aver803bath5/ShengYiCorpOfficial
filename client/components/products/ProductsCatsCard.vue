@@ -45,7 +45,7 @@ ul {
 }
 
 a {
-  color: #909399;
+  color: #606266;
 }
 
 .cats-card {

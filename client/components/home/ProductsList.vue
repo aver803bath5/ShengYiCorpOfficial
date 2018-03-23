@@ -16,8 +16,8 @@
                 <div slot="content" class="popover-text" v-html="product.name"></div>
                 <div slot="content" class="popover-text" v-html="product.model"></div>
                 <div>
-                  <h3 v-html="product.name"></h3>
-                  <h3 v-html="product.model"></h3>
+                  <h3 v-html="product.name" class="product-name"></h3>
+                  <h3 v-html="product.model" class="product-model"></h3>
                 </div>
               </el-tooltip>
             </div>
@@ -96,6 +96,14 @@ export default {
   color: #409EFF;
   font-size: 1.2rem;
   font-weight: 800;
+}
+
+.product-name, .product-model {
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  margin: 0;
+  text-decoration: none;
 }
 
 .popover-text-box {

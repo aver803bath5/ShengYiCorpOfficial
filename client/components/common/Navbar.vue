@@ -133,6 +133,10 @@ h1 {
   margin-left: 1px;
 }
 
+.menu-item-wrapper li {
+  color: #606266;
+}
+
 .toggle-menu-button-wrapper {
   display: none;
   position: relative;
