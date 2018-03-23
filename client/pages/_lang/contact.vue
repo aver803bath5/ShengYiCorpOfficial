@@ -79,7 +79,7 @@ export default {
       try {
         this.loading = true;
         await axios.post('/contact', {
-          compnayName: this.form.company,
+          companyName: this.form.company,
           email: this.form.email,
           fax: this.form.fax,
           name: this.form.name,
