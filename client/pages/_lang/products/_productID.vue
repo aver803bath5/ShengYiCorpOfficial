@@ -92,7 +92,7 @@ img {
     margin-top: 3rem;
   }
 
-  .product-name, .product-model {
+  .product-title-text .product-name, .product-title-text .product-model {
     font-size: 1.5rem;
   }
 }

@@ -1,5 +1,5 @@
 <template>
-  <div class="wrapper">
+  <div class="wrapper" id="brandWrapper">
     <header>
       <h1>
         {{ $t('navbar.brands') }}
@@ -7,7 +7,7 @@
     </header>
     <section>
       <el-row type="flex" class="brands-row" justify="space-between" :gutter="20">
-        <el-col :sm="{span:8}" :xs="{span:24}" v-for="brand in brands" :key="brand.id" >
+        <el-col :sm="{span:8}" :xs="{span:24}" v-for="brand in brands" :key="brand.id">
           <a :href="brand.link" class="brand-link" target="_blank">
             <img :src="brand.picture" :alt="brand.link">
           </a>
@@ -21,6 +21,10 @@
 import axios from '~/plugins/axios';
 
 export default {
+  mounted() {
+    const brandWrapper = document.getElementById('brandWrapper');
+    brandWrapper.addEventListener('contextmenu', event => event.preventDefault());
+  },
   async asyncData({ store }) {
     const { data } = await axios.get(`${store.state.locale}/brands`);
     return { brands: data.brands };
