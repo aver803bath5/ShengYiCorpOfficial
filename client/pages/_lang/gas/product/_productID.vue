@@ -89,6 +89,10 @@ img {
   .wrapper {
     margin-top: 3rem;
   }
+
+  .product-name, .product-model {
+    font-size: 1.5rem;
+  }
 }
 
 </style>
