@@ -10,8 +10,8 @@
                 <div slot="content" class="popover-text" v-html="product.name"></div>
                 <div slot="content" class="popover-text" v-html="product.model"></div>
                 <div>
-                  <h3 v-html="product.name"></h3>
-                  <h3 v-html="product.model"></h3>
+                  <h3 v-html="product.name" class="product-name"></h3>
+                  <h3 v-html="product.model" class="product-model"></h3>
                 </div>
               </el-tooltip>
             </div>
@@ -48,6 +48,7 @@ a {
 img {
   display: block;
   width: 100%;
+  border-bottom: 1px rgba(17, 17, 17, 0.1) solid;
 }
 
 .product-display-row {
@@ -62,6 +63,14 @@ img {
   text-align: center;
   padding: .5rem;
   color: #409EFF;
+}
+
+.product-name, .product-model {
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  margin: 0;
+  text-decoration: none;
 }
 
 .no-product-text {
