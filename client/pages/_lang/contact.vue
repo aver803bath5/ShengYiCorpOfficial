@@ -87,7 +87,7 @@ export default {
           message: this.form.message
         });
         this.$message.success(this.$t('submit-success'));
-        this.$refs[formName].resetFields();
+        this.$refs['form'].resetFields();
         this.loading = false;
       } catch (error) {
         this.loading = false;
