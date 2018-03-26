@@ -123,7 +123,6 @@ import { mapState } from 'vuex';
 export default {
   mounted() {
     document.getElementsByClassName('about-wrapper')[0].addEventListener('contextmenu', event => event.preventDefault());
-    document.getElementsByClassName('about-wrapper')[0].addEventListener('touchstart', event => event.preventDefault());
   },
   computed: {
     ...mapState([
@@ -140,7 +139,6 @@ export default {
   },
   destroyed() {
     document.getElementsByClassName('about-wrapper')[0].removeEventListener('contextmenu', event => event.preventDefault());
-    document.getElementsByClassName('about-wrapper')[0].removeEventListener('touchstart', event => event.preventDefault());
   }
 }
 </script>
