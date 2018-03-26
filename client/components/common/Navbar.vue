@@ -152,7 +152,7 @@ h1 {
   width: 100%;
   border-radius: 30px;
   left: 0;
-  height: 3px;
+  height: 4px;
   background-color: #909399;
   display: block;
   transition: .5s ease-in-out;
@@ -228,8 +228,7 @@ h1 {
   }
 
   .en-text {
-    font-size: .2rem;
-
+    font-size: .75rem;
     text-align: center;
   }
 }
