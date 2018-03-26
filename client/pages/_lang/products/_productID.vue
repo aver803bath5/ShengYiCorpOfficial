@@ -4,7 +4,7 @@
       <el-breadcrumb separator="/">
         <el-breadcrumb-item :to="convertPath('/', locale)">{{ $t('navbar.home') }}</el-breadcrumb-item>
         <el-breadcrumb-item :to="convertPath(`/products-list/${productsListCurtCatID}/${productsListCurtPage}/${productsListSearchText}`, locale)">{{ $t('navbar.products') }}</el-breadcrumb-item>
-        <el-breadcrumb-item v-html="product.name"></el-breadcrumb-item>
+        <el-breadcrumb-item><span v-html="product.name"></span></el-breadcrumb-item>
       </el-breadcrumb>
       <h1 class="product-name" v-html="product.name"></h1>
       <h2 class="product-model">
@@ -39,7 +39,7 @@ export default {
   },
   head() {
     return {
-      title: `${this.product.name} | ${this.product.model}`,
+      title: `${this.product.name} ${this.product.model}`,
       meta: [
         { hid: 'description', name: 'description', content: this.product.description },
         { hid: 'og-image', property: 'og-image', content: this.product.picture }
