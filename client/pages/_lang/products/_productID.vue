@@ -11,7 +11,7 @@
         Model: {{ product.model }}
       </h2>
       <h3 class="product-brand">
-        廠牌: {{ product.brand }}
+        {{ $t('product.brand') }}: {{ product.brand }}
       </h3>
     </header>
     <article>
