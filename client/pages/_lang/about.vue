@@ -121,6 +121,9 @@
 import { mapState } from 'vuex';
 
 export default {
+  mounted() {
+    document.getElementsByClassName('about-wrapper')[0].addEventListener('contextmenu', event => event.preventDefault());
+  },
   computed: {
     ...mapState([
       'locale'
@@ -133,6 +136,9 @@ export default {
           { hid: 'description', name: 'description', content: this.$t('about.instruction') }
       ]
     }
+  },
+  destroyed() {
+    document.getElementsByClassName('about-wrapper')[0].removeEventListener('contextmenu', event => event.preventDefault());
   }
 }
 </script>

@@ -6,6 +6,9 @@
   "gas-products-no-products": "Please Select Gas",
   "latestnews": "Latestnews",
   "product_instruction": "Products",
+  "product": {
+    "brand": "Brand"
+  },
   "navbar": {
     "home": "Home",
     "about": "About Us",

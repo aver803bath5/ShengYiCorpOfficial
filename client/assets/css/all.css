@@ -69,6 +69,11 @@ html
 
 * {
   font-family: 'Noto Sans TC', sans-serif;
+  outline: none;
+}
+
+*:focus {
+  outline: none;
 }
 
 h1 {
