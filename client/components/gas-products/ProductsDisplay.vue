@@ -3,7 +3,7 @@
     <el-row :gutter="20" class="product-display-row" v-if="gasProducts.length != 0">
       <el-col v-for="product in gasProducts" :key="product.id"  :xs="{span:24}" :sm="{span:8}" class="product-card-wrapper">
         <nuxt-link :to="convertPath(`/gas/product/${product.id}`, locale)">
-          <el-card :body-style="{ padding: '0px' }">
+          <el-card :body-style="{ padding: '0px' }" class="product-card">
             <img :src="product.picture" class="image">
             <div class="product-text">
               <el-tooltip placement="top">
@@ -63,6 +63,10 @@ img {
   margin-top: 1.5rem;
 }
 
+.product-card {
+  height: 270px;
+}
+
 .product-name, .product-model {
   white-space: nowrap;
   overflow: hidden;
@@ -89,9 +93,43 @@ img {
   font-size: 1rem;
 }
 
+@media screen and (max-width: 1300px){
+  .product-card {
+    height: 260px;
+  }
+}
+
+@media screen and (max-width: 1200px){
+  .product-card {
+    height: 240px;
+  }
+}
+
+@media screen and (max-width: 1100px){
+  .product-card {
+    height: 230px;
+  }
+}
+
+@media screen and (max-width: 1000px){
+  .product-card {
+    height: 220px;
+  }
+}
+
+@media screen and (max-width: 900px){
+  .product-card {
+    height: 200px;
+  }
+}
+
 @media screen and (max-width: 768px){
   .product-display-wrapper {
     margin-top: 0;
+  }
+
+  .product-card {
+    height: auto;
   }
 }
 </style>
