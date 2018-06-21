@@ -64,7 +64,7 @@ img {
 }
 
 .product-card {
-  height: 270px;
+  height: 280px;
 }
 
 .product-name, .product-model {
