@@ -99,13 +99,13 @@
           </div>
           <div class="cert-images-wrapper">
             <div class="cert-image">
-              <img src="/about/aboutImage1.jpg" alt="登錄證書">
+              <img src="/about/aboutImage1.jpg" alt="ISO 9001" title="ISO 9001">
             </div>
             <div class="cert-image" v-if="locale==='tw'">
-              <img src="/about/aboutImage2.jpg" alt="TAF 認證證書">
+              <img src="/about/aboutImage2.jpg" alt="ISO 9001" title="ISO 9001">
             </div>
             <div class="cert-image" v-else>
-              <img src="/about/enAboutImage.jpg" alt="TAF 認證證書">
+              <img src="/about/enAboutImage.jpg" alt="ISO 9001" title="ISO 9001">
             </div>
             <div class="cert-image">
               <img src="/about/aboutImage3.jpg" alt="TAF 認證證書">
