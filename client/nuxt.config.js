@@ -54,16 +54,12 @@ module.exports = {
     // Doc: https://github.com/nuxt-community/axios-module#usage
     '@nuxtjs/axios',
     'nuxt-fontawesome',
-    '@nuxtjs/google-analytics'
+    ['@nuxtjs/google-tag-manager', {
+      id: 'GTM-WFWR3BQ',
+      pageTracking: false
+    }],
     // 'qonfucius-nuxt-fontawesome' <-坑貨
   ],
-
-  googleAnalytics: {
-    id: 'UA-12301-2',
-    autoTracking: {
-      pageviewOnLoad: false
-    }
-  },
 
   fontawesome: {
     imports: [
