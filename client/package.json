@@ -20,6 +20,7 @@
     "@nuxtjs/axios": "^4.4.0",
     "@nuxtjs/font-awesome": "^1.0.3",
     "@nuxtjs/google-analytics": "^2.2.0",
+    "@nuxtjs/google-tag-manager": "^2.2.0",
     "babel-polyfill": "^6.26.0",
     "babel-preset-env": "^1.6.1",
     "babel-preset-es2015": "^6.24.1",
