@@ -24,7 +24,7 @@ export default {
   methods: {
     convertPath,
     doSearch() {
-      this.$router.push(this.convertPath(`/${this.locale}/products-list/0/1/${this.inputText}`));
+      this.$router.push(this.convertPath(`/products-list/0/1/${this.inputText}`, this.locale));
     }
   }
 };
