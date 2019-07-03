@@ -105,6 +105,10 @@
   dependencies:
     font-awesome "^4.7.0"
 
+"@nuxtjs/google-tag-manager@^2.2.0":
+  version "2.2.0"
+  resolved "https://registry.yarnpkg.com/@nuxtjs/google-tag-manager/-/google-tag-manager-2.2.0.tgz#ee2c78aedebcf4e0c2a42e3a53fa38023d03d1ab"
+
 "@nuxtjs/youch@^4.2.3":
   version "4.2.3"
   resolved "https://registry.yarnpkg.com/@nuxtjs/youch/-/youch-4.2.3.tgz#36f8b22df5a0efaa81373109851e1d857aca6bed"

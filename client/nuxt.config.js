@@ -53,7 +53,11 @@ module.exports = {
   modules: [
     // Doc: https://github.com/nuxt-community/axios-module#usage
     '@nuxtjs/axios',
-    'nuxt-fontawesome'
+    'nuxt-fontawesome',
+    ['@nuxtjs/google-tag-manager', {
+      id: 'GTM-WFWR3BQ',
+      pageTracking: false
+    }],
     // 'qonfucius-nuxt-fontawesome' <-坑貨
   ],
 
