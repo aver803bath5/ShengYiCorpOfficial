@@ -8,6 +8,7 @@
 
 <script>
 import convertPath from '~/utils/path';
+import { mapState } from 'vuex';
 
 export default {
   data() {
@@ -15,10 +16,15 @@ export default {
       inputText: ''
     };
   },
+  computed: {
+    ...mapState([
+      'locale'
+    ])
+  },
   methods: {
     convertPath,
     doSearch() {
-      this.$router.push(this.convertPath(`/${store.state.locale}/products-list/0/1/${this.inputText}`));
+      this.$router.push(this.convertPath(`/${this.locale}/products-list/0/1/${this.inputText}`));
     }
   }
 };
