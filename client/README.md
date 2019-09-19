@@ -1,22 +1,10 @@
 # case-sheng-yi-nuxt
 
-> My sweet Nuxt.js project
+### Deploy
 
-## Build Setup
-
-``` bash
-# install dependencies
-$ yarn install
-
-# serve with hot reload at localhost:3000
-$ yarn run dev
-
-# build for production and launch server
-$ yarn run build
-$ yarn start
-
-# generate static project
-$ yarn run generate
-```
-
-For detailed explanation on how things work, checkout [Nuxt.js docs](https://nuxtjs.org).
+1. `ssh web-admin@www.shengyi.com.tw`
+2. `cd /var/www/ShengYiCOrt/client`
+3. `git pull origin master`
+4. `npm run build`
+5. `pm2 restart shengyi`
+6. `systemctl restart httpd`
